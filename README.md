@@ -6,4 +6,5 @@ When time comes to deploy a new project, one often overlooked aspect is logging 
 + [Kibana](https://www.elastic.co/products/kibana) is an open source plugin that visualizes Elasticseach data.
 + [Logstash](https://www.elastic.co/products/logstash) is a server-side data processing pipeline that reads data from a source, transform it, and sends it to a "stash" (In this tutorial, the stash is Elasticseach).
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+![](https://cdn-images-1.medium.com/max/748/1*mwSvtVy_qGz0nTjaYbvwpw.png "")
