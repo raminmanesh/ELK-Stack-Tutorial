@@ -41,11 +41,10 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 ### 4. Creating Logstash config file 
  1. Create a config file using ```touch logstash.conf```
  2. Append a simple configuration to your config file with command:
- ```
- echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }" >> logstash.conf
- ```
-     As you can see the configuration file consist of two blocks:
+ ```echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }" >> logstash.conf```
+ 
+ As you can see the configuration file consist of two blocks:
      + input:
      + output: 
  
- 2. Run ```{Path-to-Logstash}/bin/logstash -f logstash.conf```
+ 3. Run ```{Path-to-Logstash}/bin/logstash -f logstash.conf```
