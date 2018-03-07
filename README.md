@@ -32,4 +32,4 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 ### 2. Install Kibana
  1. Download Kibana from [here](https://www.elastic.co/downloads/kibana) and extract it
  2. Run it using ```bin/kibana```
- 3. Open [127.0.0.1:5601] in your browser and check if Kibana page shows up
+ 3. Open [127.0.0.1:5601](http://127.0.0.1:5601) in your browser and check if Kibana page shows up
