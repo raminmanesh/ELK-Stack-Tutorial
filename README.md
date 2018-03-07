@@ -44,7 +44,7 @@ In Following you will get a brief guide on how to quickly setup a Log Management
  ```echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }" >> logstash.conf```
  
 As you can see the configuration file consist of two blocks:
- + ##### input block defines from where Logstash should read input data. In our case it it will be ```stdin{}``` (Standart input stream)
- + ##### utput section contains output plugins that send data from input to particular destinations.
+ + ##### Input block defines from where Logstash should read input data. In our case it it will be ```stdin{}``` (Standart input stream)
+ + ##### Output section contains output plugins that send data from input to particular destinations.
  
  3. Run ```{Path-to-Logstash}/bin/logstash -f logstash.conf```
