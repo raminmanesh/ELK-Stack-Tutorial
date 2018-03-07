@@ -41,10 +41,18 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 ### 4. Creating Logstash config file 
 1. Create a config file using ```touch logstash.conf```
 2. Append a simple configuration to your config file with command:
- ```echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }" >> logstash.conf```
+ ```echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => '127.0.0.1' } }" >> logstash.conf```
     
     As you can see the configuration file consist of two blocks:
  + Input block defines from where Logstash should read input data. In our case it it will be ```stdin{}``` (Standart input stream)
  + Output section contains output plugins that send data from input to particular destinations.
  
- 3. Run ```{Path-to-Logstash}/bin/logstash -f logstash.conf```
+### 5. Running Logstash  
+ 1. Run ```{Path-to-Logstash}/bin/logstash -f logstash.conf``` and wait for terminal user input
+ 2. Enter ```HELLO WORLD!``` in terminal
+ 3. Open Kibana in your browser using [127.0.0.1:5601](http://127.0.0.1:5601)
+ 4. Click on Set up index patterns
+ 5. Enter ```*``` as index name and click Next Step
+ 6. Choose @timestamp from time filter drop down and click on Create index pattern
+ 7. Done... You will see Hello World in your logs
+ 
