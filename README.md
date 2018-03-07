@@ -10,4 +10,20 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 ### Install Elasticsearch
  1. Download Elasticsearch compressed file from [here](https://www.elastic.co/downloads/elasticsearch) and unzip it
  2. run it with ```bin/elasticsearch``` or ```bin/elasticsearch.bat``` on Windows
- 3. Check it using ```curl -XGET http://localhost:9200```
+ 3. Check it using ```curl -XGET http://localhost:9200```. You should get the following result
+
+```{
+  "name" : "mN9s_5E",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "alapTemERFu7FQGdIc-PIA",
+  "version" : {
+    "number" : "6.2.2",
+    "build_hash" : "10b1edd",
+    "build_date" : "2018-02-16T19:01:30.685723Z",
+    "build_snapshot" : false,
+    "lucene_version" : "7.2.1",
+    "minimum_wire_compatibility_version" : "5.6.0",
+    "minimum_index_compatibility_version" : "5.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}```
