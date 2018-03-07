@@ -36,4 +36,9 @@ In Following you will get a brief guide on how to quickly setup a Log Management
  
 ### 3. Install Logstash
  1. [Download Logstash](https://www.elastic.co/downloads/logstash) and unzip it
- 2. run ```bin/logstash -e 'input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }'```
+ 
+ 
+### 4. Creating Logstash config file 
+ 1. Create a config file using ```touch logstash.conf```
+ 2. Append a simple input and output configuration to your config file with ```echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }" >> logstash.conf```
+ 2. Run ```bin/logstash -e 'input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }'```
