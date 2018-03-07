@@ -8,9 +8,9 @@ When time comes to deploy a new project, one often overlooked aspect is logging 
 In Following you will get a brief guide on how to quickly setup a Log Management Solution with the ELK Stack.
 
 ### 1. Install Elasticsearch
- 1. Download Elasticsearch compressed file from [here](https://www.elastic.co/downloads/elasticsearch) and unzip it
- 2. Run it with ```bin/elasticsearch``` or ```bin/elasticsearch.bat``` on Windows
- 3. Check it using ```curl -XGET http://localhost:9200```. You should get the following result:
+1. Download Elasticsearch compressed file from [here](https://www.elastic.co/downloads/elasticsearch) and unzip it
+2. Run it with ```bin/elasticsearch``` or ```bin/elasticsearch.bat``` on Windows
+3. Check it using ```curl -XGET http://localhost:9200```. You should get the following result:
 
 ```{
   "name" : "mN9s_5E",
@@ -30,21 +30,21 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 ```
 
 ### 2. Install Kibana
- 1. Download Kibana from [here](https://www.elastic.co/downloads/kibana) and extract it
- 2. Run it using ```bin/kibana```
- 3. Open [127.0.0.1:5601](http://127.0.0.1:5601) in your browser and check if Kibana page shows up
+1. Download Kibana from [here](https://www.elastic.co/downloads/kibana) and extract it
+2. Run it using ```bin/kibana```
+3. Open [127.0.0.1:5601](http://127.0.0.1:5601) in your browser and check if Kibana page shows up
  
 ### 3. Install Logstash
- 1. [Download Logstash](https://www.elastic.co/downloads/logstash) and unzip it
+[Download Logstash](https://www.elastic.co/downloads/logstash) and unzip it
  
  
 ### 4. Creating Logstash config file 
- 1. Create a config file using ```touch logstash.conf```
- 2. Append a simple configuration to your config file with command:
+1. Create a config file using ```touch logstash.conf```
+2. Append a simple configuration to your config file with command:
  ```echo "input { stdin { } } output { stdout{ } elasticsearch { hosts => "127.0.0.1" } }" >> logstash.conf```
  
- As you can see the configuration file consist of two blocks:
-     + input: input block defines from where Logstash should read input data. In our case it it will be ```stdin{}``` (Standart input stream)
-     + output: output section contains output plugins that send data from input to particular destinations.
+As you can see the configuration file consist of two blocks:
+ + input: input block defines from where Logstash should read input data. In our case it it will be ```stdin{}``` (Standart input stream)
+ + output: output section contains output plugins that send data from input to particular destinations.
  
  3. Run ```{Path-to-Logstash}/bin/logstash -f logstash.conf```
