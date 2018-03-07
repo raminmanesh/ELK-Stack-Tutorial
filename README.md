@@ -7,10 +7,10 @@ When time comes to deploy a new project, one often overlooked aspect is logging 
 
 In Following you will get a brief guide on how to quickly setup a Log Management Solution with the ELK Stack.
 
-### Install Elasticsearch
+### 1. Install Elasticsearch
  1. Download Elasticsearch compressed file from [here](https://www.elastic.co/downloads/elasticsearch) and unzip it
  2. run it with ```bin/elasticsearch``` or ```bin/elasticsearch.bat``` on Windows
- 3. Check it using ```curl -XGET http://localhost:9200```. You should get the following result
+ 3. Check it using ```curl -XGET http://localhost:9200```. You should get the following result:
 
 ```{
   "name" : "mN9s_5E",
@@ -29,3 +29,7 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 }
 ```
 
+### 2. Install Kibana
+ 1. Download Kibana from [here](https://www.elastic.co/downloads/kibana) and extract it
+ 2. Run it using ```bin/kibana```
+ 3. Open```127.0.0.1:5601``` in your browser and check if Kibana page shows up
