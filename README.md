@@ -146,16 +146,11 @@ As you can see we send all logs to the tcp port ```127.0.0.1:5000```
 ```
 logging.path=logs
 ```
-### 7. Configuring Logstash agein to listen to your Spring Boot logger
+### 7. Configuring Logstash again to listen to your Spring Boot logger
 Now it's time to change the logstash config file again. This time our input will be a tcp port, which should read all logs from the Spring Boot logger. Additionally, we add a filter to have nicer and queryable structure:
 ```
 input {
   tcp {
-    port => 5000
-    type => syslog
-    host => "127.0.0.1"
-  }
-  udp {
     port => 5000
     type => syslog
     host => "127.0.0.1"
@@ -180,4 +175,7 @@ output {
   stdout { codec => rubydebug }
 }
 ```
+Run logstash again using the command ```/Path/To/Logstash/bin/logstash -f /Path/To/Logstash/Config.conf```
+And Finally run your Spring Boot Project
 
+#### Congratulation! You will see now all your logs in KIBANA
