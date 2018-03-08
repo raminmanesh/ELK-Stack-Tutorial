@@ -56,7 +56,7 @@ In Following you will get a brief guide on how to quickly setup a Log Management
  6. Choose @timestamp from time filter drop down and click on Create index pattern
  7. Done... You will see Hello World in your logs
  
- ### 6. Configuring SPRING-BOOT
+ ### 6. Configuring Spring Boot
  1. Add the following dependencies in your ```pom.xml```
  ```xml
  <dependency>
@@ -77,5 +77,70 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 </dependency>
 ```
 
-2. In your Spring-Boot project, create ```logback-spring.xml``` in the root of your classpath 
+2. In your Spring Boot project, create ```logback-spring.xml``` in the root of your classpath. This file usually includes main logging configuration such as log levels and destination, as shown in the following example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+
+    <appender name="stash"
+              class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>127.0.0.1:5000</destination>
+        <encoder
+                class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <pattern>
+                    <pattern>
+                        {
+                        "service": "logtester",
+                        "host": "%property{hostname}",
+                        "ts": "%date{yyyy-MM-dd'T'HH:mm:ss.SSSZ}",
+                        "level": "%level",
+                        "message": "%msg %ex{short}",
+                        "rid": "%mdc{rid}",
+                        "vid":
+                        "%mdc{vid}",
+                        "cid": "%mdc{cid}",
+                        "land": "%mdc{land}",
+                        "logger" :
+                        "%logger"
+                        }
+                    </pattern>
+                </pattern>
+                <stackTrace>
+                    <throwableConverter
+                            class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+                        <maxDepthPerThrowable>90</maxDepthPerThrowable>
+                        <exclude>sun\.reflect\..*\.invoke.*</exclude>
+                        <exclude>net\.sf\.cglib\.proxy\.MethodProxy\.invoke</exclude>
+                        <rootCauseFirst>true</rootCauseFirst>
+                    </throwableConverter>
+                </stackTrace>
+            </providers>
+        </encoder>
+    </appender>
+    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/logtester.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level
+                %logger{36}.%M - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+    <root level="error">
+        <appender-ref ref="SAVE-TO-FILE" />
+        <appender-ref ref="stash" />
+    </root>
+    <root level="warn">
+        <appender-ref ref="SAVE-TO-FILE" />
+        <appender-ref ref="stash" />
+    </root>
+    <root level="info">
+        <appender-ref ref="SAVE-TO-FILE" />
+        <appender-ref ref="stash" />
+    </root>
+</configuration>
+```
  
