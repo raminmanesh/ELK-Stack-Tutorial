@@ -1,0 +1,142 @@
+08-03-2018 11:44:53.301 [main] INFO 
+                c.l.logtester.LogtesterApplication.logStarting - Starting LogtesterApplication on ramin-VirtualBox with PID 3658 (/home/ramin/Downloads/logtester/logtester/target/classes started by ramin in /home/ramin/Downloads/logtester/logtester)
+08-03-2018 11:44:53.305 [main] INFO 
+                c.l.logtester.LogtesterApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-03-2018 11:44:53.378 [main] INFO 
+                o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71dc3add: startup date [Thu Mar 08 11:44:53 CET 2018]; root of context hierarchy
+08-03-2018 11:44:54.330 [main] INFO 
+                o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-03-2018 11:44:54.353 [main] INFO 
+                o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-03-2018 11:44:54.354 [main] INFO 
+                o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.28
+08-03-2018 11:44:54.396 [localhost-startStop-1] INFO 
+                o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-03-2018 11:44:54.480 [localhost-startStop-1] INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+08-03-2018 11:44:54.480 [localhost-startStop-1] INFO 
+                o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1102 ms
+08-03-2018 11:44:54.997 [localhost-startStop-1] INFO 
+                o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-03-2018 11:44:55.002 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-03-2018 11:44:55.002 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-03-2018 11:44:55.003 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-03-2018 11:44:55.003 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-03-2018 11:44:55.003 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpTraceFilter' to: [/*]
+08-03-2018 11:44:55.003 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+08-03-2018 11:44:55.271 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71dc3add: startup date [Thu Mar 08 11:44:53 CET 2018]; root of context hierarchy
+08-03-2018 11:44:55.355 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/test]}" onto public java.lang.String com.logger.logtester.LogTesterController.createInfoLog()
+08-03-2018 11:44:55.360 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+08-03-2018 11:44:55.360 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+08-03-2018 11:44:55.397 [main] INFO 
+                o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+08-03-2018 11:44:55.402 [main] INFO 
+                o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+08-03-2018 11:44:55.436 [main] INFO 
+                o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+08-03-2018 11:44:55.628 [main] INFO 
+                o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+08-03-2018 11:44:55.629 [main] INFO 
+                o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+08-03-2018 11:44:55.630 [main] INFO 
+                o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+08-03-2018 11:44:55.698 [main] INFO 
+                o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-03-2018 11:44:55.762 [main] INFO 
+                o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+08-03-2018 11:44:55.772 [main] INFO 
+                c.l.logtester.LogtesterApplication.logStarted - Started LogtesterApplication in 3.038 seconds (JVM running for 5.619)
+08-03-2018 13:21:11.300 [Thread-7] INFO 
+                o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71dc3add: startup date [Thu Mar 08 11:44:53 CET 2018]; root of context hierarchy
+08-03-2018 13:21:11.323 [Thread-7] INFO 
+                o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+08-03-2018 13:24:14.073 [main] INFO 
+                c.l.logtester.LogtesterApplication.logStarting - Starting LogtesterApplication on ramin-VirtualBox with PID 4980 (/home/ramin/Downloads/logtester/logtester/target/classes started by ramin in /home/ramin/Downloads/logtester/logtester)
+08-03-2018 13:24:14.077 [main] INFO 
+                c.l.logtester.LogtesterApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-03-2018 13:24:14.197 [main] INFO 
+                o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38a5fb12: startup date [Thu Mar 08 13:24:14 CET 2018]; root of context hierarchy
+08-03-2018 13:24:15.501 [main] INFO 
+                o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-03-2018 13:24:15.571 [main] INFO 
+                o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-03-2018 13:24:15.577 [main] INFO 
+                o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.28
+08-03-2018 13:24:15.628 [localhost-startStop-1] INFO 
+                o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-03-2018 13:24:15.760 [localhost-startStop-1] INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+08-03-2018 13:24:15.761 [localhost-startStop-1] INFO 
+                o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1564 ms
+08-03-2018 13:24:16.480 [localhost-startStop-1] INFO 
+                o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-03-2018 13:24:16.486 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-03-2018 13:24:16.497 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-03-2018 13:24:16.498 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-03-2018 13:24:16.498 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-03-2018 13:24:16.499 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpTraceFilter' to: [/*]
+08-03-2018 13:24:16.500 [localhost-startStop-1] INFO 
+                o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+08-03-2018 13:24:16.928 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38a5fb12: startup date [Thu Mar 08 13:24:14 CET 2018]; root of context hierarchy
+08-03-2018 13:24:17.007 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/test]}" onto public java.lang.String com.logger.logtester.LogTesterController.createInfoLog()
+08-03-2018 13:24:17.012 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+08-03-2018 13:24:17.013 [main] INFO 
+                o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+08-03-2018 13:24:17.063 [main] INFO 
+                o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+08-03-2018 13:24:17.068 [main] INFO 
+                o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+08-03-2018 13:24:17.106 [main] INFO 
+                o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+08-03-2018 13:24:17.399 [main] INFO 
+                o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+08-03-2018 13:24:17.400 [main] INFO 
+                o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+08-03-2018 13:24:17.401 [main] INFO 
+                o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+08-03-2018 13:24:17.469 [main] INFO 
+                o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-03-2018 13:24:17.615 [main] INFO 
+                o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+08-03-2018 13:24:17.629 [main] INFO 
+                c.l.logtester.LogtesterApplication.logStarted - Started LogtesterApplication in 4.209 seconds (JVM running for 6.714)
+08-03-2018 13:25:33.431 [http-nio-8080-exec-1] INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-03-2018 13:25:33.431 [http-nio-8080-exec-1] INFO 
+                o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-03-2018 13:25:33.458 [http-nio-8080-exec-1] INFO 
+                o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+08-03-2018 13:25:37.664 [http-nio-8080-exec-2] INFO 
+                c.l.logtester.LogTesterController.createInfoLog - This is an info message.
+08-03-2018 13:25:37.665 [http-nio-8080-exec-2] WARN 
+                c.l.logtester.LogTesterController.createInfoLog - This is a warn message.
+08-03-2018 13:25:37.665 [http-nio-8080-exec-2] ERROR
+                c.l.logtester.LogTesterController.createInfoLog - This is an error message.
+08-03-2018 13:27:21.532 [http-nio-8080-exec-4] INFO 
+                c.l.logtester.LogTesterController.createInfoLog - This is an info message.
+08-03-2018 13:27:21.532 [http-nio-8080-exec-4] WARN 
+                c.l.logtester.LogTesterController.createInfoLog - This is a warn message.
+08-03-2018 13:27:21.533 [http-nio-8080-exec-4] ERROR
+                c.l.logtester.LogTesterController.createInfoLog - This is an error message.
+08-03-2018 13:28:02.826 [Thread-8] INFO 
+                o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38a5fb12: startup date [Thu Mar 08 13:24:14 CET 2018]; root of context hierarchy
+08-03-2018 13:28:02.836 [Thread-8] INFO 
+                o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
