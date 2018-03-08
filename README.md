@@ -5,7 +5,7 @@ When time comes to deploy a new project, one often overlooked aspect is logging 
 + [Kibana](https://www.elastic.co/products/kibana) is an open source plugin that visualizes Elasticseach data.
 + [Logstash](https://www.elastic.co/products/logstash) is a server-side data processing pipeline that reads data from a source, transform it, and sends it to a "stash" (In this tutorial, the stash is Elasticseach).
 
-In Following you will get a brief guide on how to quickly setup a Log Management Solution with the ELK Stack.
+In Following you will get a brief guide on how to quickly setup a Log Management Solution with the ELK Stack alongside Spring Boot using TCP connection.
 
 ### 1. Install Elasticsearch
 1. Download Elasticsearch compressed file from [here](https://www.elastic.co/downloads/elasticsearch) and unzip it
@@ -55,4 +55,27 @@ In Following you will get a brief guide on how to quickly setup a Log Management
  5. Enter ```*``` as index name and click Next Step
  6. Choose @timestamp from time filter drop down and click on Create index pattern
  7. Done... You will see Hello World in your logs
+ 
+ ### 6. Configuring SPRING-BOOT
+ 1. Add the following dependencies in your ```pom.xml```
+ ```
+ <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>4.11</version>
+		</dependency>
+    ```
+ 2. In your Spring-Boot project, create ```logback-spring.xml``` in the root of your classpath
+ 2. 
  
