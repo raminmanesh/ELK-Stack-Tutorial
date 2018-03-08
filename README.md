@@ -77,7 +77,7 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 </dependency>
 ```
 
-2. In your Spring Boot project, create ```logback-spring.xml``` in the root of your classpath. This file usually includes main logging configuration such as log levels and destination, as shown in the following example:
+2. In your Spring Boot project, create ```logback-spring.xml``` in the root of your classpath. This file usually includes main logging configuration such as log levels, destination, log pattern, as shown in the following example:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
