@@ -146,4 +146,38 @@ As you can see we send all logs to the tcp port ```127.0.0.1:5000```
 ```
 logging.path=logs
 ```
+### 7. Configuring Logstash agein to listen to your Spring Boot logger
+Now it's time to change the logstash config file again. This time our input will be a tcp port, which should read all logs from the Spring Boot logger. Additionally, we add a filter to have nicer and queryable structure:
+```
+input {
+  tcp {
+    port => 5000
+    type => syslog
+    host => "127.0.0.1"
+  }
+  udp {
+    port => 5000
+    type => syslog
+    host => "127.0.0.1"
+  }
+}
+
+filter {
+  if [type] == "syslog" {
+    grok {
+      match => { "message" => "%{SYSLOGTIMESTAMP:syslog_timestamp} %{SYSLOGHOST:syslog_hostname} %{DATA:syslog_program}(?:\[%{POSINT:syslog_pid}\])?: %{GREEDYDATA:syslog_message}" }
+      add_field => [ "received_at", "%{@timestamp}" ]
+      add_field => [ "received_from", "%{host}" ]
+    }
+    date {
+      match => [ "syslog_timestamp", "MMM  d HH:mm:ss", "MMM dd HH:mm:ss" ]
+    }
+  }
+}
+
+output {
+  elasticsearch { hosts => ["localhost:9200"] }
+  stdout { codec => rubydebug }
+}
+```
 
