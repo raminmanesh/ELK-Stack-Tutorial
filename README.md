@@ -83,12 +83,10 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
-
     <appender name="stash"
               class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <destination>127.0.0.1:5000</destination>
-        <encoder
-                class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
             <providers>
                 <pattern>
                     <pattern>
