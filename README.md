@@ -142,4 +142,8 @@ In Following you will get a brief guide on how to quickly setup a Log Management
 </configuration>
 ```
 As you can see we send all logs to the tcp port ```127.0.0.1:5000```
- 
+3. Add following line to ```application.properties```
+```
+logging.path=logs
+```
+
