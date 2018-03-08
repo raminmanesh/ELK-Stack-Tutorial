@@ -158,17 +158,12 @@ input {
 }
 
 filter {
-  if [type] == "syslog" {
-    grok {
-      match => { "message" => "%{SYSLOGTIMESTAMP:syslog_timestamp} %{SYSLOGHOST:syslog_hostname} %{DATA:syslog_program}(?:\[%{POSINT:syslog_pid}\])?: %{GREEDYDATA:syslog_message}" }
-      add_field => [ "received_at", "%{@timestamp}" ]
-      add_field => [ "received_from", "%{host}" ]
-    }
-    date {
-      match => [ "syslog_timestamp", "MMM  d HH:mm:ss", "MMM dd HH:mm:ss" ]
-    }
+  json {
+    source => "message"
+    target => "log"
   }
 }
+
 
 output {
   elasticsearch { hosts => ["localhost:9200"] }
@@ -178,4 +173,4 @@ output {
 Run logstash again using the command ```/Path/To/Logstash/bin/logstash -f /Path/To/Logstash/Config.conf```
 And Finally run your Spring Boot Project
 
-#### Congratulation! You will see now all your logs in KIBANA
+#### Congratulation! You will see now all your logs in JSON format, visualized in Kibana
