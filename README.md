@@ -58,24 +58,24 @@ In Following you will get a brief guide on how to quickly setup a Log Management
  
  ### 6. Configuring SPRING-BOOT
  1. Add the following dependencies in your ```pom.xml```
- ```
+ ```xml
  <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+</dependency>
 
-		<dependency>
-			<groupId>net.logstash.logback</groupId>
-			<artifactId>logstash-logback-encoder</artifactId>
-			<version>4.11</version>
-		</dependency>
-    ```
- 2. In your Spring-Boot project, create ```logback-spring.xml``` in the root of your classpath
- 2. 
+<dependency>
+	<groupId>net.logstash.logback</groupId>
+	<artifactId>logstash-logback-encoder</artifactId>
+	<version>4.11</version>
+</dependency>
+```
+
+2. In your Spring-Boot project, create ```logback-spring.xml``` in the root of your classpath 
  
